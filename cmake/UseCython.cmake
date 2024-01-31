@@ -195,27 +195,7 @@ function( compile_pyx _name generated_file )
 
   endforeach() # pyx_file
 
-  # Set additional flags.
-  if( CYTHON_ANNOTATE )
-    set( annotate_arg "--annotate" )
-  endif()
-
-  if( CYTHON_NO_DOCSTRINGS )
-    set( no_docstrings_arg "--no-docstrings" )
-  endif()
-
-  if( "${CMAKE_BUILD_TYPE}" STREQUAL "Debug" OR
-        "${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo" )
-      set( cython_debug_arg "--gdb" )
-  endif()
-
-  if( "${PYTHONLIBS_VERSION_STRING}" MATCHES "^2." )
-    set( version_arg "-2" )
-  elseif( "${PYTHONLIBS_VERSION_STRING}" MATCHES "^3." )
-    set( version_arg "-3" )
-  else()
-    set( version_arg )
-  endif()
+set( version_arg "-3" )
 
   # Include directory arguments.
   list( REMOVE_DUPLICATES cython_include_directories )

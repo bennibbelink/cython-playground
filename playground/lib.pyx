@@ -1,4 +1,4 @@
-from playground import cpp_playground
+from . cimport cpp_playground
 
 def run_playground():
     cpp_playground.run_playground()
@@ -8,7 +8,7 @@ def libdel():
 
 
 def py_start():
-    cpp_playground.py_start()
+    cpp_playground.PyStart()
 
 def py_import_call_init():
-    cpp_playground.py_import_call_init()
+    cpp_playground.PyImportCallInit()
