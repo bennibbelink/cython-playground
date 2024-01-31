@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <iostream>
-#include "playground.h"
+#include "run_playground.h"
 #include "pyhooks.h"
 
 void run_playground() {
