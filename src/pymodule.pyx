@@ -1,3 +1,4 @@
+# distutils: language=c++
 from playground import lib as playlib
 from cpython.exc cimport PyErr_CheckSignals
 

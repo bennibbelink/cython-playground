@@ -10,9 +10,10 @@ def main():
 
     cmake_cmd += ["-DCMAKE_INSTALL_PREFIX=" + local_dir]
     cmake_cmd += ["-DCMAKE_BUILD_TYPE=DEBUG"]
+    # cmake_cmd += ["--debug-output"]
     subprocess.check_call(cmake_cmd, cwd=build_dir)
 
-    subprocess.check_call(["make", "-j2"], cwd=build_dir)
+    subprocess.check_call(["make", "VERBOSE=1", "-j2"], cwd=build_dir)
 
 if __name__ == "__main__":
     main()
